@@ -95,7 +95,7 @@ if "secret" not in st.session_state:
 
 #FIXME: Logic breaks here
 if "attempts" not in st.session_state:
-    st.session_state.attempts = 1
+    st.session_state.attempts = 0
 
 if "score" not in st.session_state:
     st.session_state.score = 0
