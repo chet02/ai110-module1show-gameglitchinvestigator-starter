@@ -21,17 +21,26 @@ Document at least 3 bugs you found. Add rows as needed.
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
 I used ChatGPT for this project.
+
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+ChatGPT helped me identify that the hint messages in the check_guess() function were reversed. The game was telling the player to "Go HIGHER!" when the guess was already higher than the secret number. I updated the hint messages and then verified the fix by running the game in Streamlit and comparing my guesses to the secret number shown in the Developer Debug Info panel. After the change, higher guesses correctly displayed "Go LOWER!" and lower guesses displayed "Go HIGHER!".
+
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
+One AI suggestion was that the string conversion of the secret number might be the main cause of the incorrect hint behavior. After testing the game and reviewing the check_guess() function, I found that the immediate issue was actually the reversed hint messages. I verified this by making guesses against the secret number displayed in the game and observing that the hints were incorrect even before changing the string conversion logic. This showed me the importance of testing AI suggestions instead of assuming they are always correct.
 
 ---
 
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
+I considered a bug fixed only after I tested it in the game and confirmed that the behavior matched the expected result. For example, after fixing the hint bug, I compared my guesses to the secret number shown in the Developer Debug Info panel and verified that the hints were no longer reversed. I also reran the game multiple times to make sure the fix worked consistently.
+
 - Describe at least one test you ran (manual or using pytest)  
   and what it showed you about your code.
+I created and ran pytest tests for the check_guess() function. One test checked that a guess of 60 against a secret value of 50 returned the outcome "Too High" and the hint "Go LOWER!". The tests passed successfully, which showed that the hint logic was working correctly after my fix. I also manually tested the game in Streamlit to confirm that the behavior matched the test results.
+
 - Did AI help you design or understand any tests? How?
+Yes. ChatGPT helped me understand how to create pytest tests for the check_guess() function. It suggested creating test cases for winning, too high, and too low guesses. These examples helped me understand how to verify the game's logic automatically instead of relying only on manual testing.
 
 ---
 

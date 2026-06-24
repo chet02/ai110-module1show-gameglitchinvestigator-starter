@@ -1,3 +1,4 @@
+# FIX: Moved game logic from app.py into logic_utils.py with AI assistance to keep the code more organized and easier to maintain.
 def get_range_for_difficulty(difficulty: str):
     if difficulty == "Easy":
         return 1, 20
@@ -30,7 +31,7 @@ def check_guess(guess, secret):
         return "Win", "🎉 Correct!"
 
     try:
-        #FIXME: Logic breaks here
+        # FIX: Updated hint directions after reviewing AI suggestions and verifying against the game's secret value.
         if guess > secret:
             return "Too High", "📉 Go LOWER!"
         else:
