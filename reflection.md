@@ -47,12 +47,17 @@ Yes. ChatGPT helped me understand how to create pytest tests for the check_guess
 ## 4. What did you learn about Streamlit and state?
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
-
+Streamlit reruns the entire script every time a user interacts with the app, such as clicking a button or entering a value. Without session state, variables would reset on each rerun and the app would lose information. Session state acts like memory for the application by storing values such as the secret number, score, and number of attempts between reruns. In this project, I learned that session state is essential for keeping track of game progress and providing a consistent user experience.
 ---
 
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+One habit I want to continue using is testing my code after each fix instead of waiting until the end of the project. Running the game and using pytest helped me catch problems early and confirm that my changes worked as expected.
+
 - What is one thing you would do differently next time you work with AI on a coding task?
+Next time I work with AI on a coding task, I would spend more time understanding the code before applying the suggested changes. This project showed me that taking a few minutes to review the logic can help me catch mistakes and learn more from the process.
+
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+This project showed me that AI can be a helpful teammate for debugging and generating ideas, but its suggestions still need to be reviewed and tested carefully. I learned that understanding and verifying the code is just as important as getting an answer from AI.
