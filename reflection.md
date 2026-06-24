@@ -3,10 +3,7 @@
 Answer each question in 3 to 5 sentences. Be specific and honest about what actually happened while you worked. This is about your process, not trying to sound perfect.
 
 ## 1. What was broken when you started?
-
-- What did the game look like the first time you ran it?
-- List at least two concrete bugs you noticed at the start  
-  (for example: "the hints were backwards").
+When I first ran the game, the interface loaded correctly, but the game behavior was inconsistent. The hints sometimes appeared to be backwards, telling me to guess higher when my guess was already too high. After playing the game more than ten times, I also noticed that the attempts counter behaved inconsistently. In some games it started at 0, while in others it started at 1, and there were times when it did not update correctly after multiple guesses. The score was also inconsistent and did not always reflect the outcome of the game as I expected.
 
 **Bug Reproduction Log**
 
@@ -14,9 +11,9 @@ Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+| 60 (Secret Num: 54)| hint = "Go lower" | hint = "Go higher" | None |
+| Started a new game after refreshing the page | Attempts counter should start at 0 | Attempts counter started at 1 | none |
+| Made two consecutive guesses during a game | Attempts counter should increase from 0 to 1 to 2 | Attempts counter remained unchanged or increased inconsistently | none |
 
 ---
 
